@@ -1,7 +1,6 @@
-# Bingo Game
+Sure, here's the updated section on how to include the StdDraw library in your project:
 
-## Overview
-This program simulates a bingo game. It takes the number of players from an input file, generates unique bingo cards for each player based on a template, and starts the game. The program randomly selects numbers, and players mark off those numbers on their cards. The winner is the first player to mark off all numbers on one of their cards.
+---
 
 ## How to Use
 1. Clone or download the repository to your local machine.
@@ -10,19 +9,35 @@ This program simulates a bingo game. It takes the number of players from an inpu
    ```
    javac BingoGame.java
    ```
-4. Create an input file named `BingoGameInput.txt` (a prefered type of file is already created) with the following format:
+4. Include the `StdDraw` library in your project:
+   - Download the `stdlib.jar` file from [here](https://introcs.cs.princeton.edu/java/stdlib/).
+   - In your IntelliJ project, right-click on your project name in the project explorer.
+   - Select "Open Module Settings."
+   - In the dialog that opens, select "Libraries" from the left menu.
+   - Click the "+" icon and choose "Java."
+   - Navigate to the location where you downloaded `stdlib.jar` and select it.
+   - Click "OK" to add the library to your project.
+5. Create an input file named `BingoGameInput.txt` with the following format:
    ```
    <number of players>
    <template numbers>
    ```
    Replace `<number of players>` with the desired number of players, and `<template numbers>` with the bingo card template. Each number in the template should be separated by whitespace.
-5. Run the program.
+6. Run the program.
    ```
    java BingoGame
    ```
 
+## Program Output
+- The program will display the bingo cards for each player in the console.
+- During the game, it will print the number drawn for each turn and indicate the winner(s) when the game ends.
+
 ## Contributors
-- [Alexandros Vasileiadis](https://github.com/yourusername) - Author
+- [Alexandros Vasileiadis](https://github.com/Alexandros-Vasileiadis) - Author
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Let me know if you need further assistance!
