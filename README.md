@@ -35,9 +35,6 @@ Sure, here's the updated section on how to include the StdDraw library in your p
 ## Contributors
 - [Alexandros Vasileiadis](https://github.com/Alexandros-Vasileiadis) - Author
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 
 Let me know if you need further assistance!
