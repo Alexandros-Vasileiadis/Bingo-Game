@@ -20,7 +20,12 @@ import static java.lang.Thread.sleep;
  */
 public class BingoGame {
 
-	// Read the template from the input file
+	/**
+	 * Reads the template from the input file.
+	 *
+	 * @param arr     The array to fill with template numbers.
+	 * @param scanner Scanner object for reading from the input file.
+	 */
 	private static void fillTemplate(int[][] arr, Scanner scanner) {
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr[0].length; j++) {
@@ -35,7 +40,14 @@ public class BingoGame {
 		}
 	}
 
-	// Randomize unique numbers from a to b
+	/**
+	 * Randomizes unique numbers within a specified range.
+	 *
+	 * @param arr The array to fill with random numbers.
+	 * @param a   The lower bound of the range.
+	 * @param b   The upper bound of the range.
+	 * @param N   The number of random numbers to generate.
+	 */
 	private static void randomize(int[] arr, int a, int b, int N) {
 		int i = 0;
 		while (i < N) {
@@ -54,7 +66,12 @@ public class BingoGame {
 		}
 	}
 
-	// Fill all cards of a player with unique numbers
+	/**
+	 * Fills all cards of a player with unique numbers based on a template.
+	 *
+	 * @param tombola The 4D array representing the bingo cards for all players.
+	 * @param template The template used for generating the cards.
+	 */
 	private static void fillAllCards(int[][][][] tombola, int[][] template) {
 		for (int i = 0; i < tombola.length; i++) {
 			int range = 0;
@@ -92,7 +109,11 @@ public class BingoGame {
 		}
 	}
 
-	// Display bingo cards for each player
+	/**
+	 * Displays bingo cards for each player in the console.
+	 *
+	 * @param tombola The 4D array representing the bingo cards for all players.
+	 */
 	private static void displayCards(int[][][][] tombola) {
 		String line = "-----------------------------------------";
 		for (int i = 0; i < tombola.length; i++) {
@@ -115,7 +136,13 @@ public class BingoGame {
 		}
 	}
 
-	// Cross a randomly chosen number for each player
+	/**
+	 * Crosses a randomly chosen number for each player.
+	 *
+	 * @param tombola The 4D array representing the bingo cards for all players.
+	 * @param counter The array to keep track of crossed numbers for each player.
+	 * @param num     The number to cross.
+	 */
 	private static void cross(int[][][][] tombola, int[][] counter, int num) {
 		for (int i = 0; i < tombola.length; i++) {
 			for (int j = 0; j < tombola[0].length; j++) {
@@ -129,7 +156,14 @@ public class BingoGame {
 		}
 	}
 
-	// Retrieve a card of a chosen player
+	/**
+	 * Retrieves a card of a chosen player.
+	 *
+	 * @param tombola The 4D array representing the bingo cards for all players.
+	 * @param player  The index of the player.
+	 * @param card    The index of the card.
+	 * @return The bingo card of the chosen player.
+	 */
 	private static int[][] getCard(int[][][][] tombola, int player, int card) {
 		int[][] cards = new int[tombola[0][0].length][tombola[0][0][0].length];
 
@@ -139,7 +173,13 @@ public class BingoGame {
 		return cards;
 	}
 
-	// Game function
+	/**
+	 * Conducts the bingo game.
+	 *
+	 * @param tombola The 4D array representing the bingo cards for all players.
+	 * @param players The number of players.
+	 * @throws InterruptedException If the game thread is interrupted.
+	 */
 	private static void game(int[][][][] tombola, int players) throws InterruptedException {
 		int num = 90;
 		int[] gameNum = new int[num];
@@ -174,7 +214,12 @@ public class BingoGame {
 		}
 	}
 
-	// Display winners of the Game
+	/**
+	 * Displays the winner of the game.
+	 *
+	 * @param card   The bingo card of the winning player.
+	 * @param player The index of the winning player.
+	 */
 	public static void displayWinner(int[][] card, int player) {
 		StdDraw.setXscale(0.0, 45.0);
 		StdDraw.setYscale(0.0, 45.0);
@@ -202,7 +247,13 @@ public class BingoGame {
 		StdDraw.show(2000);
 	}
 
-//  main function
+	/**
+	 * Main method.
+	 *
+	 * @param args Command-line arguments.
+	 * @throws IOException          If an I/O error occurs while reading the input file.
+	 * @throws InterruptedException If the game thread is interrupted.
+	 */
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// Read input from file
 		File inputFile = new File("BingoGameInput.txt");
