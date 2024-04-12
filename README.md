@@ -10,7 +10,7 @@ This program simulates a bingo game. It takes the number of players from an inpu
    ```
    javac BingoGame.java
    ```
-4. Create an input file named `BingoGameInput.txt` with the following format:
+4. Create an input file named `BingoGameInput.txt` (a prefered type of file is already created) with the following format:
    ```
    <number of players>
    <template numbers>
